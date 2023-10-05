@@ -9,6 +9,13 @@ async function index(req, res) {
     }
 }
 
+async function title(req, res) {
+    res.json({
+        title: "Diary Entries",
+        description: "Create your own Diary!"
+    })
+}
+
 async function show(req, res) {
     try {
         const id = parseInt(req.params.id);
@@ -65,5 +72,5 @@ async function destroy(req, res) {
 }
 
 module.exports = {
-    index, show, create, destroy, update
+    index, show, create, destroy, update, title
 }

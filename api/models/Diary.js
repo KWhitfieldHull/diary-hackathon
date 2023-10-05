@@ -39,7 +39,7 @@ class Diary {
         const { name, text, date, category } = data;
         const response = await db.query('INSERT INTO diary (name, text, date, category) VALUES ($1, $2, $3, $4) RETURNING *;', [name, text, date, category]);
         const diaryId = response.rows[0].entry_id;
-        const newDiary = await Diary.getOneById(diaryIdId);
+        const newDiary = await Diary.getOneById(diaryId);
         return new Diary(newDiary)
     }
 
