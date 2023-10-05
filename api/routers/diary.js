@@ -8,7 +8,7 @@ diaryRouter.get("/", diaryController.title);
 diaryRouter.get("/diary", diaryController.index); 
 diaryRouter.post("/diary", diaryController.create);
 diaryRouter.get("/:id", diaryController.show); 
-//diaryRouter.patch("/:id", diaryController.update); 
+diaryRouter.patch("/:id", diaryController.update); 
 diaryRouter.delete("/:id", diaryController.destroy); 
 
 
