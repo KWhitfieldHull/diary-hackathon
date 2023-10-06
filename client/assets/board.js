@@ -17,6 +17,7 @@ function createPostElement(data) {
     category.textContent = `Category: ` + data["category"];
     post.appendChild(category);
 
+    console.log(post)
     return post;
 }
 
@@ -54,10 +55,9 @@ async function loadPosts() {
         }
     }
     const response = await fetch("http://localhost:3000/diary");
-
     if (response.status == 200) {
         const posts = await response.json();
-
+console.log(posts)
         const container = document.getElementById("posts");
 
         posts.forEach(p => {

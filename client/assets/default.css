@@ -25,8 +25,20 @@ fieldset {
     flex-direction: column;
     padding: 0.2rem;
 }
+.scroll {
+    overflow-y: scroll;
+    height: 200px;
+    width: 1000px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 section {
+    
     position: absolute;
     left: 50%;
     top: 50%;
