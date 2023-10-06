@@ -17,7 +17,6 @@ function createPostElement(data) {
     category.textContent = `Category: ` + data["category"];
     post.appendChild(category);
 
-    console.log(post)
     return post;
 }
 
@@ -41,7 +40,6 @@ document.getElementById("post-form").addEventListener("submit", async (e) => {
     }
 
     const result = await fetch("http://localhost:3000/diary", options);
-    console.log(result)
     if (result.status == 200) {
         window.location.reload();
     }
@@ -54,10 +52,9 @@ async function loadPosts() {
             Authorisation: localStorage.getItem("token")
         }
     }
-    const response = await fetch("http://localhost:3000/diary");
+    const response = await fetch("http://localhost:3000/diary", options);
     if (response.status == 200) {
         const posts = await response.json();
-console.log(posts)
         const container = document.getElementById("posts");
 
         posts.forEach(p => {
