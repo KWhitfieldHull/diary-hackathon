@@ -1,8 +1,6 @@
 document.getElementById("login-form").addEventListener("submit", async (e) => {
     e.preventDefault();
-console.log("Are you working?")
     const form = new FormData(e.target);
-
     const options = {
         method: "POST",
         headers: {
@@ -15,7 +13,7 @@ console.log("Are you working?")
         })
     }
 
-    console.log(options)
+    
     const response = await fetch("http://localhost:3000/users/login", options);
     
     const data = await response.json();

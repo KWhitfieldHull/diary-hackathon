@@ -23,6 +23,7 @@ class Token {
         if (response.rows.length != 1) {
             throw new Error("Unable to locate token.");
         } else {
+            console.log(response.rows[0])
             return new Token(response.rows[0]);
         }
     }
