@@ -7,9 +7,8 @@ keeping all your notes neatly organized and easily accessible for your exclusive
 - Then, `cd ` to the project.
 - To open VS code, `code .`.
 #### How to install the libraries
-- Change directory into the server by running `cd api`
 - Install the dependancies by running `npm install`
-- If this did not install the nodemon package, run `npm install -D`
+- If this did not install the nodemon package, run `npm install -D nodemon`
 #### How to connect the database
 - Create a `.env` file within the server folder
 - Login to [elephantsql](https://www.elephantsql.com)
